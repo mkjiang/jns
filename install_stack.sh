@@ -37,3 +37,6 @@ apt-get -y install libatlas-base-dev gfortran
 #-----------------------------------------------------
 
 pip install scipy
+pip install pydotplus
+pip install seaborn
+pip install scikit-learn
