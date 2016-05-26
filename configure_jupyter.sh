@@ -15,14 +15,11 @@ mkdir notebooks
 
 target=~/.jupyter/jupyter_notebook_config.py
 
-# get current ip address - we assume it is static
-ip=$(echo $(hostname -I))
-
 # set up dictionary of changes for jupyter_config.py
 declare -A arr
 app='c.NotebookApp'
 arr+=(["$app.open_browser"]="$app.open_browser = False")
-arr+=(["$app.ip"]="$app.ip ='$ip'")
+arr+=(["$app.ip"]="$app.ip ='*'")
 arr+=(["$app.port"]="$app.port = 9090")
 arr+=(["$app.enable_mathjax"]="$app.enable_mathjax = True")
 arr+=(["$app.notebook_dir"]="$app.notebook_dir = '/home/jns/notebooks'")
